@@ -1,6 +1,4 @@
-const Content = ({ item }) => {
-    return null;
-}
+const Content = () => null;
 
 
 export default Content;

@@ -7,14 +7,14 @@ import Content from './components/content';
 const styles = {
   root: {
     display: 'flex',
-  }
-}
+  },
+};
 
 const App = () => (
   <div style={styles.root}>
     <SideMenu />
     <div>
-    <Switch>
+      <Switch>
         <Route path="/:item" component={({ match: { params } }) => (<Content {...params} />)} />
         <Route path="" component={() => (<Content item="profile" />)} />
       </Switch>
@@ -22,4 +22,4 @@ const App = () => (
   </div>
 );
 
-export default App
+export default App;

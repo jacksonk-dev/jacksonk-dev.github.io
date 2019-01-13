@@ -1,7 +1,5 @@
-const initialState =  { } 
+const initialState = { };
 
-const reducer = (state = initialState, action) => {
-    return state;
-}
+const reducer = (state = initialState) => state;
 
 export default reducer;
