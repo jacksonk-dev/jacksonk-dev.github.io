@@ -11,7 +11,7 @@ const styles = {
     root: {
         height: '92.8vh',
         width: 50,
-        backgroundColor: '#000',
+        backgroundColor: 'blue',
         display: 'flex',
         flexDirection: 'column',
         paddingTop: 16,
