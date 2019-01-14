@@ -9,6 +9,9 @@
 # testing
 /client/coverage
 
+#lint
+/.eslintcache
+
 # production
 /client/build
 
