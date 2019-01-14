@@ -1,7 +1,7 @@
 import React from 'react';
 import Switch from 'react-router-dom/Switch';
 import Route from 'react-router-dom/Route';
-import SideMenu from './components/sideMenu';
+import SideMenu from './components/side-menu';
 import Content from './components/content';
 
 const styles = {
@@ -12,13 +12,14 @@ const styles = {
 
 const App = () => (
   <div style={styles.root}>
-    <SideMenu />
-    <div>
-      <Switch>
-        <Route path="/:item" component={({ match: { params } }) => (<Content {...params} />)} />
-        <Route path="" component={() => (<Content item="profile" />)} />
-      </Switch>
-    </div>
+    <Switch>
+      <Route path="/:active" component={({ match: { params } }) => (<SideMenu {...params} />)} />
+      <Route path="" component={() => (<SideMenu active="profile" />)} />
+    </Switch>
+    <Switch>
+      <Route path="/:item" component={({ match: { params } }) => (<Content {...params} />)} />
+      <Route path="" component={() => (<Content item="profile" />)} />
+    </Switch>
   </div>
 );
 
