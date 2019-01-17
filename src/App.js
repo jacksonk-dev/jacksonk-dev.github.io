@@ -11,7 +11,7 @@ const styles = {
     display: 'flex',
   },
   content: {
-    padding: 32,
+    padding: 16,
     width: '100%',
   },
 };
