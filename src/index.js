@@ -11,7 +11,7 @@ import * as serviceWorker from './serviceWorker';
 const store = createStore(reducers);
 
 ReactDOM.render(
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Provider store={store}>
       <App />
     </Provider>

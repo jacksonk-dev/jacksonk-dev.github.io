@@ -20,12 +20,12 @@ const App = ({ classes }) => (
   <div className={classes.root}>
     <Switch>
       <Route path="/:active" component={({ match: { params } }) => (<SideMenu {...params} />)} />
-      <Route path={`${process.env.PUBLIC_URL}/`} component={() => (<SideMenu active="profile" />)} />
+      <Route path="/" component={() => (<SideMenu active="profile" />)} />
     </Switch>
     <div className={classes.content}>
       <Switch>
         <Route path="/:active" component={({ match: { params } }) => (<Content {...params} />)} />
-        <Route path={`${process.env.PUBLIC_URL}/`} component={() => (<Content active="profile" />)} />
+        <Route path="/" component={() => (<Content active="profile" />)} />
       </Switch>
     </div>
   </div>

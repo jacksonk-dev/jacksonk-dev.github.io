@@ -55,7 +55,7 @@ const StyledTypograhpy = withStyles(textStyles)(Typography);
 const Profile = ({ classes, data }) => (
   <Card className={classes.root}>
     <CardMedia
-      image="/images/profilePic.jpg"
+      image="./images/profilePic.jpg"
       className={classes.media}
     />
     <StyledCardHeader title={data.name} />
