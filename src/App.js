@@ -9,10 +9,11 @@ import Content from './components/content';
 const styles = {
   root: {
     display: 'flex',
+    position: 'fixed',
   },
   content: {
     padding: 16,
-    width: '100%',
+    width: '100vw',
   },
 };
 
