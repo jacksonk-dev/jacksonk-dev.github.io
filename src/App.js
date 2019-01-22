@@ -8,12 +8,17 @@ import Content from './components/content';
 
 const styles = {
   root: {
-    display: 'flex',
-    position: 'fixed',
-  },
-  content: {
-    padding: 16,
     width: '100vw',
+  },
+  '@media (min-width: 640px)': {
+    root: {
+      display: 'flex',
+      position: 'fixed',
+    },
+    content: {
+      padding: 16,
+      width: '100%',
+    },
   },
 };
 
