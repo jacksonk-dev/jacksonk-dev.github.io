@@ -10,8 +10,8 @@ import inContainer from './container';
 
 const styles = {
   root: {
-    minWidth: 300,
-    width: '40%',
+    width: '98%',
+    margin: 'auto',
     height: 'fit-content',
     backgroundColor: '#000',
   },
@@ -36,6 +36,15 @@ const styles = {
   },
   marginTop: {
     marginTop: 16,
+  },
+  '@media (min-width: 640px)': {
+    root: {
+      minWidth: 450,
+      width: '40%',
+      margin: 0,
+      height: 'fit-content',
+      backgroundColor: '#000',
+    },
   },
 };
 

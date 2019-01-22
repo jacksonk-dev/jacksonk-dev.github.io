@@ -11,15 +11,8 @@ import inContainer from './container';
 
 const styles = {
   root: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat( auto-fit, 29% )',
-    gridTemplateRows: 'repeat( auto-fit, 300px )',
-    gridGap: '8px',
-  },
-  projectContainer: {
-    minWidth: 200,
-    height: 450,
-    backgroundColor: '#000',
+    width: '98%',
+    margin: 'auto',
   },
   media: {
     width: 'auto',
@@ -46,6 +39,18 @@ const styles = {
   divider: {
     backgroundColor: 'white',
     margin: '0 16px',
+  },
+  projectContainer: {
+    width: '100%',
+    margin: '8px auto',
+    backgroundColor: '#000',
+  },
+  '@media (min-width: 640px)': {
+    root: {
+      display: 'grid',
+      gridGap: '8px',
+      gridTemplateColumns: '30% 30% 30%',
+    },
   },
 };
 
@@ -94,7 +99,6 @@ const Profile = ({ classes, projects }) => (
                 >
                   {linkText || 'Check out'}
                 </a>
-              );
               </Typography>
             </CardContent>
           </Card>

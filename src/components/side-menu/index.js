@@ -14,59 +14,71 @@ import withContainer from './container';
 
 const styles = {
   root: {
-    height: '100vh',
-    width: 'fit-content',
+    width: '100%',
+    height: 'fit-content',
     backgroundColor: 'black',
     display: 'flex',
-    alignItems: 'center',
-  },
-  menuExpandIconContainer: {
-    backgroundColor: '#fff',
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center',
-  },
-  menuParent: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    height: '100%',
+    marginBottom: 8,
   },
   menu: {
-    height: '100%',
     display: 'flex',
-    flexDirection: 'column',
-  },
-  menuItem: {
-    display: 'flex',
-    alignItems: 'center',
-    marginTop: 8,
-    '&hover': {
-      backgroundColor: 'red',
-    },
   },
   icon: {
     color: 'white',
     fontSize: 32,
   },
-  menuToggleIcon: {
-    color: 'black',
-    fontSize: 32,
-    cursor: 'pointer',
-  },
   primaryText: {
     color: '#fff',
   },
   imgContainer: {
-    width: 60,
-    height: 60,
-    margin: '16px 8px',
+    display: 'none',
   },
-  img: {
-    width: '100%',
-    height: '100%',
-    borderRadius: '50%',
-    border: '3px solid white',
+  '@media (min-width: 640px)': {
+    root: {
+      height: '100vh',
+      width: 'fit-content',
+    },
+    imgContainer: {
+      display: 'block',
+      width: 60,
+      height: 60,
+      margin: '16px 8px',
+    },
+    img: {
+      width: '100%',
+      height: '100%',
+      borderRadius: '50%',
+      border: '3px solid white',
+    },
+    menuExpandIconContainer: {
+      backgroundColor: '#fff',
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    menuToggleIcon: {
+      color: 'black',
+      fontSize: 32,
+      cursor: 'pointer',
+    },
+    menuParent: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      height: '100%',
+    },
+    menu: {
+      height: '100%',
+      flexDirection: 'column',
+    },
+    menuItem: {
+      display: 'flex',
+      alignItems: 'center',
+      marginTop: 8,
+      '&:hover': {
+        backgroundColor: 'grey',
+      },
+    },
   },
 };
 
