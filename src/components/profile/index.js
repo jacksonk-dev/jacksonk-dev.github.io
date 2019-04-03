@@ -1,99 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import withStyles from '@material-ui/core/styles/withStyles';
-import Typography from '@material-ui/core/Typography';
 import inContainer from './container';
+import Basic from './basic';
+import Online from './online';
 
 const styles = {
   root: {
+    display: 'grid',
+    gridGap: '8px',
     width: '98%',
     margin: 'auto',
     height: 'fit-content',
-    backgroundColor: '#000',
-  },
-  media: {
-    width: 'auto',
-    height: 300,
-  },
-  link: {
-    color: 'cyan',
-    border: '1px solid cyan',
-    borderRadius: 25,
-    marginRight: 8,
-    padding: 8,
-    width: 100,
-    display: 'inline-block',
-    textAlign: 'center',
-    textDecoration: 'none',
-    '&:hover': {
-      color: '#000',
-      backgroundColor: 'cyan',
-    },
-  },
-  marginTop: {
-    marginTop: 16,
-  },
-  '@media (min-width: 640px)': {
-    root: {
-      minWidth: 450,
-      width: '40%',
-      margin: 0,
-      height: 'fit-content',
-      backgroundColor: '#000',
+    '@media (min-width: 640px)': {
+      gridTemplateColumns: '1fr 2fr',
     },
   },
 };
 
-const textStyles = {
-  root: {
-    color: '#fff',
-  },
-
-  title: {
-    color: '#fff',
-  },
-};
-
-const StyledCardHeader = withStyles(textStyles)(CardHeader);
-const StyledTypograhpy = withStyles(textStyles)(Typography);
-
-const Profile = ({ classes, data }) => (
-  <Card className={classes.root}>
-    <CardMedia
-      image="./images/profilePic.jpg"
-      className={classes.media}
-    />
-    <StyledCardHeader title={data.name} />
-    <CardContent>
-      <StyledTypograhpy>
-        {data.description}
-      </StyledTypograhpy>
-      <Typography
-        variant="subheading"
-        className={classes.marginTop}
-      >
-        {
-            Object.entries(data.contacts).map(([name, link], index) => {
-              const reactKey = `${name}-link-${index}`;
-              return (
-                <a
-                  href={link}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  key={reactKey}
-                  className={classes.link}
-                >
-                  {name}
-                </a>
-              );
-            })}
-      </Typography>
-    </CardContent>
-  </Card>
+const Profile = ({
+  classes,
+  data,
+}) => (
+  <div className={classes.root}>
+    <Basic data={data} />
+    <Online data={data} />
+  </div>
 );
 
 Profile.propTypes = {
