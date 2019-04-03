@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'react-router-dom/Link';
 import compose from 'recompose/compose';
 import withStyles from '@material-ui/core/styles/withStyles';
+import Paper from '@material-ui/core/Paper';
 import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -12,13 +13,12 @@ import ContractIcon from '@material-ui/icons/ChevronLeft';
 import menuItems from './menuItems';
 import withContainer from './container';
 
-const styles = {
+const styles = theme => ({
   root: {
     width: '100%',
     height: 'fit-content',
-    backgroundColor: 'black',
     display: 'flex',
-    marginBottom: 8,
+    marginBottom: theme.spacing.unit,
   },
   menu: {
     display: 'flex',
@@ -31,6 +31,9 @@ const styles = {
     color: '#fff',
   },
   imgContainer: {
+    display: 'none',
+  },
+  menuExpandIconContainer: {
     display: 'none',
   },
   '@media (min-width: 640px)': {
@@ -51,13 +54,13 @@ const styles = {
       border: '3px solid white',
     },
     menuExpandIconContainer: {
-      backgroundColor: '#fff',
       height: '100%',
       display: 'flex',
       alignItems: 'center',
+      backgroundColor: theme.palette.grey[50],
     },
     menuToggleIcon: {
-      color: 'black',
+      color: 'inherit',
       fontSize: 32,
       cursor: 'pointer',
     },
@@ -74,18 +77,18 @@ const styles = {
     menuItem: {
       display: 'flex',
       alignItems: 'center',
-      marginTop: 8,
+      marginTop: theme.spacing.unit,
       '&:hover': {
         backgroundColor: 'grey',
       },
     },
   },
-};
+});
 
 const SideMenu = ({
   active, classes, expanded, expandMenu,
 }) => (
-  <div className={classes.root}>
+  <Paper className={classes.root} elevation={0}>
     <div className={classes.menuParent}>
       <MenuList className={classes.menu}>
         {
@@ -146,7 +149,7 @@ const SideMenu = ({
           )
       }
     </div>
-  </div>
+  </Paper>
 );
 
 SideMenu.propTypes = {

@@ -43,7 +43,6 @@ const styles = {
   projectContainer: {
     width: '100%',
     margin: '8px auto',
-    backgroundColor: '#000',
   },
   '@media (min-width: 640px)': {
     root: {
@@ -87,7 +86,7 @@ const Profile = ({ classes, projects }) => (
                 {description}
               </StyledTypograhpy>
               <Typography
-                variant="subheading"
+                variant="subtitle1"
                 className={classes.marginTop}
               >
                 <a
