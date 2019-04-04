@@ -2,7 +2,7 @@
   "name": "show-case",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://je-kaypro.github.io/show-case/",
+  "homepage": "http://je-kaypro.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -10,7 +10,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js --cache",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -b master"
   },
   "dependencies": {
     "@material-ui/core": "^3.6.2",
