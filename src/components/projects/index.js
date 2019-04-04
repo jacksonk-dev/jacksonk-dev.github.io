@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import inContainer from './container';
 
-const styles = {
+const styles = theme => ({
   root: {
     width: '98%',
     margin: 'auto',
@@ -21,10 +21,11 @@ const styles = {
   link: {
     color: 'cyan',
     border: '1px solid cyan',
+    width: 'fit-content',
+    minWidth: 100,
     borderRadius: 25,
-    marginRight: 8,
-    padding: 8,
-    width: 100,
+    padding: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
     display: 'inline-block',
     textAlign: 'center',
     textDecoration: 'none',
@@ -51,20 +52,7 @@ const styles = {
       gridTemplateColumns: '30% 30% 30%',
     },
   },
-};
-
-const textStyles = {
-  root: {
-    color: '#fff',
-  },
-
-  title: {
-    color: '#fff',
-  },
-};
-
-const StyledCardHeader = withStyles(textStyles)(CardHeader);
-const StyledTypograhpy = withStyles(textStyles)(Typography);
+});
 
 const Profile = ({ classes, projects }) => (
   <div className={classes.root}>
@@ -79,12 +67,12 @@ const Profile = ({ classes, projects }) => (
               image={image}
               className={classes.media}
             />
-            <StyledCardHeader title={name} />
+            <CardHeader title={name} />
             <Divider className={classes.divider} />
             <CardContent>
-              <StyledTypograhpy>
+              <Typography>
                 {description}
-              </StyledTypograhpy>
+              </Typography>
               <Typography
                 variant="subtitle1"
                 className={classes.marginTop}

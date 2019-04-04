@@ -9,10 +9,10 @@ const styles = {
   root: {
     display: 'grid',
     gridGap: '8px',
+    justifyItems: 'center',
     width: '98%',
     margin: 'auto',
-    height: 'fit-content',
-    '@media (min-width: 640px)': {
+    '@media (min-width: 1250px)': {
       gridTemplateColumns: '1fr 2fr',
     },
   },
