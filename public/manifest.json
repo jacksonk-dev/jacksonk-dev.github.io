@@ -7,6 +7,11 @@
       "src": "./images/jack-white.jpg",
       "sizes": "16x16, 24x24, 32x32, 48x48, 64x64, 72x72, 96x96, 128x128, 144x144, 168x168, 192x192, 256x256, 512x512, 300x300",
       "type": "image/jpg"
+    },
+    {
+      "src": "./images/jack-white.png",
+      "sizes": "16x16, 24x24, 32x32, 48x48, 64x64, 72x72, 96x96, 128x128, 144x144, 168x168, 192x192, 256x256, 512x512, 300x300",
+      "type": "image/png"
     }
   ],
   "start_url": "/",
