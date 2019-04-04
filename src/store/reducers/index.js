@@ -58,7 +58,7 @@ const initialState = {
       name: 'Jobs We Go',
       description: 'A platform for job advertisement',
       image: './images/projects/jobsWeGo.jpeg',
-      url: 'https://jobswego.com',
+      url: 'https://jobs-we-go.firebaseapp.com',
       linkText: 'Visit',
     },
 
