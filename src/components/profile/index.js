@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
+import { makeStyles } from '@material-ui/core';
 import inContainer from './container';
 import Basic from './basic';
 import Online from './online';
 
-const styles = {
+const useStyles = makeStyles({
   root: {
     display: 'grid',
     gridGap: '8px',
@@ -16,22 +16,24 @@ const styles = {
       gridTemplateColumns: '1fr 2fr',
     },
   },
-};
+});
 
 const Profile = ({
-  classes,
   data,
-}) => (
-  <div className={classes.root}>
-    <Basic data={data} />
-    <Online data={data} />
-  </div>
-);
+}) => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Basic data={data} />
+      <Online data={data} />
+    </div>
+  );
+};
 
 Profile.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
   data: PropTypes.shape({}).isRequired,
 };
 
 
-export default withStyles(styles)(inContainer(Profile));
+export default inContainer(Profile);

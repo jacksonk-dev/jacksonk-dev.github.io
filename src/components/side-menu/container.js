@@ -1,5 +1,4 @@
-import compose from 'recompose/compose';
-import withState from 'recompose/withState';
+import { withState, compose } from 'recompose';
 import { connect } from 'react-redux';
 
 export default compose(

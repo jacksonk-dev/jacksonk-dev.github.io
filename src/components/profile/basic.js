@@ -1,15 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import withStyles from '@material-ui/core/styles/withStyles';
+import {
+  Card, CardHeader, CardContent, CardMedia, Typography, Divider, makeStyles,
+} from '@material-ui/core';
 
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   media: {
     width: 'auto',
     height: 300,
@@ -18,8 +14,8 @@ const styles = theme => ({
     color: 'cyan',
     border: '1px solid cyan',
     borderRadius: 25,
-    marginRight: theme.spacing.unit,
-    padding: theme.spacing.unit,
+    marginRight: theme.spacing(1),
+    padding: theme.spacing(1),
     width: 100,
     display: 'inline-block',
     textAlign: 'center',
@@ -30,7 +26,7 @@ const styles = theme => ({
     },
   },
   marginTop: {
-    marginTop: theme.spacing.unit * 2,
+    marginTop: theme.spacing(2),
   },
   '@media (min-width: 640px)': {
     root: {
@@ -42,33 +38,36 @@ const styles = theme => ({
   },
 
   divider: {
-    marginBottom: theme.spacing.unit * 2,
+    marginBottom: theme.spacing(2),
   },
-});
+}));
 
 const Basic = ({
   data: {
     name, description, image,
-  }, classes,
-}) => (
-  <Card className={classes.root}>
-    <CardMedia
-      image={image}
-      className={classes.media}
-    />
-    <CardHeader title={name} />
-    <CardContent>
-      <Divider className={classes.divider} />
-      <Typography>
-        {description}
-      </Typography>
-    </CardContent>
-  </Card>
-);
+  },
+}) => {
+  const classes = useStyles();
+
+  return (
+    <Card className={classes.root}>
+      <CardMedia
+        image={image}
+        className={classes.media}
+      />
+      <CardHeader title={name} />
+      <CardContent>
+        <Divider className={classes.divider} />
+        <Typography>
+          {description}
+        </Typography>
+      </CardContent>
+    </Card>
+  );
+};
 
 Basic.propTypes = {
   data: PropTypes.shape({}).isRequired,
-  classes: PropTypes.shape({}).isRequired,
 };
 
-export default withStyles(styles)(Basic);
+export default Basic;

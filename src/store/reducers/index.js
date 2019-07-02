@@ -9,7 +9,7 @@ import {
 const initialState = {
   profile: {
     name: 'je-kaypro',
-    description: 'JavaScript and Python dev. Just a spoiler alert, am that guy you see in your dreams - the greatest Js & Python coder in your 2020 dreams.',
+    description: 'JavaScript and Python dev. Just a spoiler alert, am that guy you see in your dreams - the greatest Js & Python programmer in your 2020 dreams.',
     image: './images/profilePic.jpg',
     online: [
       {
@@ -42,7 +42,7 @@ const initialState = {
         Icon: FaFacebookF,
       },
       {
-        app: 'Mixcloud',
+        app: 'MixCloud',
         link: 'https://www.mixcloud.com/Deeje_kay_UG',
       },
       {
@@ -55,19 +55,30 @@ const initialState = {
 
   projects: [
     {
-      name: 'Jobs We Go',
-      description: 'A platform for job advertisement',
-      image: './images/projects/jobsWeGo.jpeg',
-      url: 'https://jobs-we-go.firebaseapp.com',
-      linkText: 'Visit',
+      name: 'House With Me',
+      description: `Real Estate Sales Funnel. 
+        It lets you get in touch with a Real Estate Consultant,
+         a friend of mine in Bahrain with details of what you need - a villa, apartment etc. 
+         Feel free to use it if you are in Bahrain`,
+      image: './images/projects/houseWithMe.jpg',
+      url: 'http://housewithme.000webhostapp.com',
+      linkText: 'Go To',
     },
-
     {
-      name: 'Python CMD Youtube Downloader',
-      description: 'A python script that dowloads youtube videos. Nothing fancy about it. This is something I did as part of my Python learning journey',
-      image: './images/projects/pythonCMDYoutubeDownloader.png',
+      name: 'Jobs We Go',
+      description: `A platform for job advertisement. 
+                    You can create accounts and share job related content 
+                    - job opportunities, job related articles, career building opportunities etc`,
+      image: './images/projects/jobsWeGo.jpg',
+      url: 'https://jobs-we-go.firebaseapp.com',
+      linkText: 'Check Out',
+    },
+    {
+      name: 'Python CMD YouTube Downloader',
+      description: 'A python script that downloads YouTube videos. Nothing fancy about it. This is something I did as part of my Python learning journey',
+      image: './images/projects/pythonCMDYoutubeDownloader.jpeg',
       url: 'https://github.com/je-kaypro/python-youtube-downloader',
-      linkText: 'See on github',
+      linkText: 'See On Github',
     },
   ],
 };

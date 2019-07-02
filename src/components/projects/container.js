@@ -1,4 +1,4 @@
-import compose from 'recompose/compose';
+import { compose } from 'recompose';
 import { connect } from 'react-redux';
 
 export default compose(

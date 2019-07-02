@@ -1,27 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import withStyles from '@material-ui/core/styles/withStyles';
+import {
+  Card, CardHeader, CardContent, Button, IconButton, makeStyles,
+} from '@material-ui/core';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
 
+  },
+  header: {
+    fontFamily: 'Sexy Beachy',
+    fontSize: 48,
   },
   container: {
     display: 'flex',
     justifyContent: 'center',
     flexGrow: 0,
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing(3),
   },
   link: {
     width: '128px',
     height: '128px',
     padding: '10%',
-    margin: theme.spacing.unit,
+    margin: theme.spacing(1),
     border: '4px solid white',
     borderRadius: '50%',
     textTransform: 'none',
@@ -31,14 +32,17 @@ const styles = theme => ({
     fontSize: 60,
     color: 'white',
   },
-});
+}));
 
-const Online = ({ data: { online }, classes }) => (
-  <Card className={classes.root}>
-    <CardHeader title="Find me online" />
-    <CardContent className={classes.container}>
-      <div>
-        {
+const Online = ({ data: { online } }) => {
+  const classes = useStyles();
+
+  return (
+    <Card className={classes.root}>
+      <CardHeader classes={{ title: classes.header }} title="Find me online" />
+      <CardContent className={classes.container}>
+        <div>
+          {
           online.map(({ app, link, Icon }, index) => {
             const reactKey = `${app}-link-${index}`;
             return (
@@ -63,14 +67,14 @@ const Online = ({ data: { online }, classes }) => (
             );
           })
         }
-      </div>
-    </CardContent>
-  </Card>
-);
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
 
 Online.propTypes = {
   data: PropTypes.shape({}).isRequired,
-  classes: PropTypes.shape({}).isRequired,
 };
 
-export default withStyles(styles)(Online);
+export default Online;
