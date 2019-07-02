@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Switch from 'react-router-dom/Switch';
-import Route from 'react-router-dom/Route';
+import { Switch, Route } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
@@ -32,6 +31,7 @@ const theme = createMuiTheme({
   },
   typography: {
     useNextVariants: true,
+    // fontFamily: 'Nixie One',
     h5: {
       fontSize: '1.2rem',
       fontWeight: 'lighter',
