@@ -1,8 +1,8 @@
 {
-  "name": "show-case",
+  "name": "jacksonk-dev",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://je-kaypro.github.io",
+  "homepage": "https://jacksonk-dev.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
