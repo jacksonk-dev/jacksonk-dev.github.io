@@ -26,7 +26,7 @@ const FootNote = () => {
       >
         &copy;
         {'    '}
-        je-kaypro
+        jacksonk-dev
         {`  ${new Date().getFullYear()}`}
       </Typography>
     </div>
