@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   },
   typo: {
     color: '#000',
-    fontSize: 50,
+    fontSize: 40,
     fontFamily: 'Sexy Beachy',
   },
 }));
