@@ -57,6 +57,7 @@ const Online = ({ data: { online } }) => {
                 href={link}
                 rel="noopener noreferrer"
                 target="_blank"
+                title={app}
                 key={reactKey}
                 className={classes.link}
               >

@@ -1,9 +1,11 @@
 import {
   FaLinkedin,
   FaTwitter,
+  FaMedium,
   FaGithub,
   FaInstagram,
   FaFacebookF,
+  FaMixcloud,
 } from 'react-icons/fa';
 
 const initialState = {
@@ -17,6 +19,12 @@ const initialState = {
         link: 'https://www.linkedIn.com/in/jacksonk-dev',
         Icon: FaLinkedin,
         username: 'jacksonk-dev',
+      },
+      {
+        app: 'Medium',
+        link: 'https://medium.com/@jekaypro',
+        Icon: FaMedium,
+        username: 'jekaypro',
       },
       {
         app: 'Twitter',
@@ -43,6 +51,7 @@ const initialState = {
       },
       {
         app: 'MixCloud',
+        Icon: FaMixcloud,
         link: 'https://www.mixcloud.com/Deejekay_ug/',
       },
       {
