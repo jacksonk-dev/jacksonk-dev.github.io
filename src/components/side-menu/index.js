@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: theme.palette.grey[50],
     },
     menuToggleIcon: {
-      color: 'inherit',
+      color: '#000',
       fontSize: 32,
       cursor: 'pointer',
     },
