@@ -8,7 +8,7 @@ import {
 
 const initialState = {
   profile: {
-    name: 'jacksonk-dev',
+    name: 'jacksonk.dev',
     description: 'JavaScript, PHP and Python Dev. Just a spoiler alert, am that guy you see in your dreams - the greatest Js & Python programmer in your 2020 dreams.',
     image: './images/profilePic.jpg',
     online: [
