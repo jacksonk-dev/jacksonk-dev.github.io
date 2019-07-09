@@ -8,15 +8,15 @@ import {
 
 const initialState = {
   profile: {
-    name: 'je-kaypro',
-    description: 'JavaScript and Python dev. Just a spoiler alert, am that guy you see in your dreams - the greatest Js & Python programmer in your 2020 dreams.',
+    name: 'jacksonk-dev',
+    description: 'JavaScript, PHP and Python Dev. Just a spoiler alert, am that guy you see in your dreams - the greatest Js & Python programmer in your 2020 dreams.',
     image: './images/profilePic.jpg',
     online: [
       {
         app: 'LinkedIn',
-        link: 'https://www.linkedIn.com/in/jekaypro',
+        link: 'https://www.linkedIn.com/in/jacksonk-dev',
         Icon: FaLinkedin,
-        username: 'jekaypro',
+        username: 'jacksonk-dev',
       },
       {
         app: 'Twitter',
@@ -26,9 +26,9 @@ const initialState = {
       },
       {
         app: 'Github',
-        link: 'https://github.com/je-kaypro',
+        link: 'https://github.com/jacksonk-dev',
         Icon: FaGithub,
-        username: 'je-kaypro',
+        username: 'jacksonk-dev',
       },
       {
         app: 'Instagram',
@@ -38,12 +38,12 @@ const initialState = {
       },
       {
         app: 'Facebook',
-        link: 'https://www.facebook.com/kamya.jackson.50',
+        link: 'https://www.facebook.com/jackson.kamya.79',
         Icon: FaFacebookF,
       },
       {
         app: 'MixCloud',
-        link: 'https://www.mixcloud.com/Deeje_kay_UG',
+        link: 'https://www.mixcloud.com/Deejekay_ug/',
       },
       {
         app: 'Yote',
@@ -77,7 +77,7 @@ const initialState = {
       name: 'Python CMD YouTube Downloader',
       description: 'A python script that downloads YouTube videos. Nothing fancy about it. This is something I did as part of my Python learning journey',
       image: './images/projects/pythonCMDYoutubeDownloader.jpeg',
-      url: 'https://github.com/je-kaypro/python-youtube-downloader',
+      url: 'https://github.com/jacksonk-dev/python-youtube-downloader',
       linkText: 'See On Github',
     },
   ],
