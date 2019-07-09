@@ -9,9 +9,9 @@ const useStyles = makeStyles(theme => ({
     margin: `${theme.spacing(3)}px ${theme.spacing(1)}px`,
   },
   typo: {
-    color: '#000',
-    fontSize: 40,
     fontFamily: 'Sexy Beachy',
+    fontSize: 40,
+    color: 'blue',
   },
 }));
 

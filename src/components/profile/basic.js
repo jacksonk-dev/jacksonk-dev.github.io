@@ -6,9 +6,15 @@ import {
 
 
 const useStyles = makeStyles(theme => ({
+  title: {
+    color: 'cyan',
+    fontSize: 32,
+  },
   media: {
     width: 'auto',
     height: 300,
+  },
+  description: {
   },
   link: {
     color: 'cyan',
@@ -55,10 +61,10 @@ const Basic = ({
         image={image}
         className={classes.media}
       />
-      <CardHeader title={name} />
+      <CardHeader classes={{ title: classes.title }} title={name} />
       <CardContent>
         <Divider className={classes.divider} />
-        <Typography>
+        <Typography className={classes.description}>
           {description}
         </Typography>
       </CardContent>
@@ -67,7 +73,11 @@ const Basic = ({
 };
 
 Basic.propTypes = {
-  data: PropTypes.shape({}).isRequired,
+  data: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    image: PropTypes.string,
+  }).isRequired,
 };
 
 export default Basic;

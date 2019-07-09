@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
   },
   icon: {
-    color: 'white',
+    color: 'cyan',
     fontSize: 32,
   },
   primaryText: {
@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
       width: '100%',
       height: '100%',
       borderRadius: '50%',
-      border: '3px solid white',
+      border: '3px solid cyan',
     },
     menuExpandIconContainer: {
       height: '100%',

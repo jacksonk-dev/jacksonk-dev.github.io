@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => ({
   header: {
     fontFamily: 'Sexy Beachy',
     fontSize: 48,
+    color: 'cyan',
   },
   container: {
     display: 'flex',
@@ -30,7 +31,10 @@ const useStyles = makeStyles(theme => ({
 
   icon: {
     fontSize: 60,
-    color: 'white',
+    color: 'cyan',
+  },
+  iconPlaceholder: {
+    color: 'cyan',
   },
 }));
 
@@ -60,7 +64,7 @@ const Online = ({ data: { online } }) => {
                   {
                     Icon
                       ? <Icon className={classes.icon} />
-                      : app
+                      : <span className={classes.iconPlaceholder}>{app}</span>
                   }
                 </IconButton>
               </Button>
@@ -74,7 +78,9 @@ const Online = ({ data: { online } }) => {
 };
 
 Online.propTypes = {
-  data: PropTypes.shape({}).isRequired,
+  data: PropTypes.shape({
+    online: PropTypes.arrayOf(PropTypes.shape({})),
+  }).isRequired,
 };
 
 export default Online;

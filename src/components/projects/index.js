@@ -7,8 +7,19 @@ import inContainer from './container';
 
 const useStyles = makeStyles(theme => ({
   root: {
+  },
+  header: {
+    fontFamily: 'Brendan',
+    fontSize: 60,
+    color: 'blue',
+    textAlign: 'center',
+  },
+  projectsContainer: {
     width: '98%',
     margin: 'auto',
+  },
+  projectName: {
+    color: 'cyan',
   },
   media: {
     width: 'auto',
@@ -39,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     margin: '8px auto',
   },
   '@media (min-width: 640px)': {
-    root: {
+    projectsContainer: {
       display: 'grid',
       gridGap: '8px',
       gridTemplateColumns: '30% 30% 30%',
@@ -52,43 +63,48 @@ const Profile = ({ projects }) => {
 
   return (
     <div className={classes.root}>
-      {
-      projects.map(({
-        name, description, image, url, linkText,
-      }, index) => {
-        const reactKey = `${name}-${index}`;
-        return (
-          <Card key={reactKey} className={classes.projectContainer}>
-            <CardMedia
-              image={image}
-              className={classes.media}
-            />
-            <CardHeader title={name} />
-            <Divider className={classes.divider} />
-            <CardContent>
-              <Typography>
-                {description}
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                className={classes.marginTop}
-              >
-                <Button
-                  component="a"
-                  href={url}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  key={reactKey}
-                  className={classes.link}
-                >
-                  {linkText || 'Check out'}
-                </Button>
-              </Typography>
-            </CardContent>
-          </Card>
-        );
-      })
-    }
+      <Typography variant="h4" className={classes.header}>
+        Projects
+      </Typography>
+      <div className={classes.projectsContainer}>
+        {
+          projects.map(({
+            name, description, image, url, linkText,
+          }, index) => {
+            const reactKey = `${name}-${index}`;
+            return (
+              <Card key={reactKey} className={classes.projectContainer}>
+                <CardMedia
+                  image={image}
+                  className={classes.media}
+                />
+                <CardHeader classes={{ title: classes.projectName }} title={name} />
+                <Divider className={classes.divider} />
+                <CardContent>
+                  <Typography>
+                    {description}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    className={classes.marginTop}
+                  >
+                    <Button
+                      component="a"
+                      href={url}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      key={reactKey}
+                      className={classes.link}
+                    >
+                      {linkText || 'Check out'}
+                    </Button>
+                  </Typography>
+                </CardContent>
+              </Card>
+            );
+          })
+        }
+      </div>
     </div>
   );
 };
