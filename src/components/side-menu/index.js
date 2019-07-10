@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
     height: 'fit-content',
     display: 'flex',
     marginBottom: theme.spacing(1),
+    animation: '.6s ease-in 0s 1 slideInFromLeft'
   },
   menu: {
     display: 'flex',
@@ -78,6 +79,9 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: 'grey',
       },
     },
+    listItemText: {
+      animation: '.6s ease-in 0s 1 slideInFromLeft'
+    }
   },
 }));
 
@@ -112,6 +116,7 @@ const SideMenu = ({
                     expanded
                     && (
                       <ListItemText
+                        className={classes.listItemText}
                         classes={{ primary: classes.primaryText }}
                         primary={name}
                         inset

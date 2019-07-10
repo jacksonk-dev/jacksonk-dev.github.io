@@ -6,6 +6,9 @@ import {
 
 
 const useStyles = makeStyles(theme => ({
+  root: {
+      animation: '.6s ease-in 0s 1 slideInFromLeft'
+  },
   title: {
     color: 'cyan',
     fontSize: 32,

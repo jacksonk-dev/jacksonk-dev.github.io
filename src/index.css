@@ -13,6 +13,46 @@
   url("./fonts/Brendan/the_bredan.ttf") format("truetype"),
   url("./fonts/Brendan/the_bredan.svg") format("svg");
 }
+@keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(+100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+@keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+@keyframes slideInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(+100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
 body {
   margin: 0;
   padding: 0;

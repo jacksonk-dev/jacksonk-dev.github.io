@@ -7,6 +7,7 @@ import inContainer from './container';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    animation: '.6s ease-in 0s 1 slideInFromTop'
   },
   header: {
     fontFamily: 'Brendan',
