@@ -22,15 +22,15 @@ const initialState = {
       },
       {
         app: 'Medium',
-        link: 'https://medium.com/@jekaypro',
+        link: 'https://medium.com/@jacksonk.dev',
         Icon: FaMedium,
-        username: 'jekaypro',
+        username: 'jacksonk.dev',
       },
       {
         app: 'Twitter',
-        link: 'https://www.twitter.com/jekaypro',
+        link: 'https://www.twitter.com/jacksonk_dev',
         Icon: FaTwitter,
-        username: 'jekaypro',
+        username: 'jacksonk_dev',
       },
       {
         app: 'Github',
@@ -40,9 +40,9 @@ const initialState = {
       },
       {
         app: 'Instagram',
-        link: 'https://www.instagram.com/je_kaypro/',
+        link: 'https://www.instagram.com/jacksonk.dev',
         Icon: FaInstagram,
-        username: 'je_kaypro',
+        username: 'jacksonk.dev',
       },
       {
         app: 'Facebook',
