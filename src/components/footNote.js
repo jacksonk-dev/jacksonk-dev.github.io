@@ -10,8 +10,8 @@ const useStyles = makeStyles(theme => ({
     animation: '.6s ease-in 0s 1 slideInFromBottom'
   },
   typo: {
-    fontFamily: 'Sexy Beachy',
-    fontSize: 40,
+    // fontFamily: 'Sexy Beachy',
+    fontSize: 20,
     color: 'blue',
   },
 }));
@@ -26,8 +26,8 @@ const FootNote = () => {
         className={classes.typo}
       >
         &copy;
-        {'    '}
-        jacksonk.dev
+        {' '}
+        JK TECH UGANDA
         {`  ${new Date().getFullYear()}`}
       </Typography>
     </div>
