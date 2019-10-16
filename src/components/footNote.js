@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     padding: theme.spacing(3),
     margin: `${theme.spacing(3)}px ${theme.spacing(1)}px`,
-    animation: '.6s ease-in 0s 1 slideInFromBottom'
+    animation: '.6s ease-in 0s 1 slideInFromBottom',
   },
   typo: {
     // fontFamily: 'Sexy Beachy',
@@ -27,7 +27,7 @@ const FootNote = () => {
       >
         &copy;
         {' '}
-        JK TECH UGANDA
+        Jekay Technologies
         {`  ${new Date().getFullYear()}`}
       </Typography>
     </div>
