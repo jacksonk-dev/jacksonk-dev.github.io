@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
-  Paper, MenuList, MenuItem, ListItemIcon, ListItemText, makeStyles,
+  Paper, MenuList, MenuItem, ListItemIcon, ListItemText, makeStyles, Avatar,
 } from '@material-ui/core';
 import ExpandIcon from '@material-ui/icons/ChevronRight';
 import ContractIcon from '@material-ui/icons/ChevronLeft';
@@ -12,10 +12,9 @@ import withContainer from './container';
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    height: 'fit-content',
     display: 'flex',
     marginBottom: theme.spacing(1),
-    animation: '.6s ease-in 0s 1 slideInFromLeft'
+    animation: '.6s ease-in 0s 1 slideInFromLeft',
   },
   menu: {
     display: 'flex',
@@ -27,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   primaryText: {
     color: '#fff',
   },
-  imgContainer: {
+  avatar: {
     display: 'none',
   },
   menuExpandIconContainer: {
@@ -38,17 +37,12 @@ const useStyles = makeStyles(theme => ({
       height: '100vh',
       width: 'fit-content',
     },
-    imgContainer: {
+    avatar: {
       display: 'block',
       width: 60,
       height: 60,
-      margin: '16px 8px',
-    },
-    img: {
-      width: '100%',
-      height: '100%',
-      borderRadius: '50%',
       border: '3px solid cyan',
+      margin: '8px auto',
     },
     menuExpandIconContainer: {
       height: '100%',
@@ -80,8 +74,8 @@ const useStyles = makeStyles(theme => ({
       },
     },
     listItemText: {
-      animation: '.6s ease-in 0s 1 slideInFromLeft'
-    }
+      animation: '.6s ease-in 0s 1 slideInFromLeft',
+    },
   },
 }));
 
@@ -128,13 +122,7 @@ const SideMenu = ({
             })
           }
         </MenuList>
-        <div className={classes.imgContainer}>
-          <img
-            src="images/jack.jpg"
-            alt=""
-            className={classes.img}
-          />
-        </div>
+        <Avatar alt="JK" src="images/jack.jpg" className={classes.avatar} />
       </div>
       <div className={classes.menuExpandIconContainer}>
         {
