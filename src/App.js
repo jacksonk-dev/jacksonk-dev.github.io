@@ -16,11 +16,18 @@ const styles = {
   '@media (min-width: 640px)': {
     root: {
       display: 'flex',
+    },
+    sideMenu: {
       position: 'fixed',
+      zIndex: 10,
     },
     content: {
       padding: 16,
       width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      flexGrow: 10,
+      marginLeft: 100,
     },
   },
 };
@@ -43,10 +50,12 @@ const App = ({ classes }) => (
   <div className={classes.root}>
     <CssBaseline />
     <MuiThemeProvider theme={theme}>
-      <Switch>
-        <Route path="/:active" component={({ match: { params } }) => (<SideMenu {...params} />)} />
-        <Route path="/" component={() => (<SideMenu active="profile" />)} />
-      </Switch>
+      <div className={classes.sideMenu}>
+        <Switch>
+          <Route path="/:active" component={({ match: { params } }) => (<SideMenu {...params} />)} />
+          <Route path="/" component={() => (<SideMenu active="profile" />)} />
+        </Switch>
+      </div>
       <div className={classes.content}>
         <Switch>
           <Route path="/:active" component={({ match: { params } }) => (<Content {...params} />)} />
