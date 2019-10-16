@@ -64,6 +64,13 @@ const initialState = {
 
   projects: [
     {
+      name: 'Jekay Technologies Website',
+      description: 'Jekay Technologies Website',
+      image: './images/projects/jekayTech.PNG',
+      url: 'https://jk-tech-prod.firebaseapp.com',
+      linkText: 'Go To',
+    },
+    {
       name: 'House With Me',
       description: `Real Estate Sales Funnel. 
         It lets you get in touch with a Real Estate Consultant,
@@ -85,7 +92,7 @@ const initialState = {
     {
       name: 'Python CMD YouTube Downloader',
       description: 'A python script that downloads YouTube videos. Nothing fancy about it. This is something I did as part of my Python learning journey',
-      image: './images/projects/pythonCMDYoutubeDownloader.jpeg',
+      image: './images/projects/pythonCMDYoutubeDownloader.jpg',
       url: 'https://github.com/jacksonk-dev/python-youtube-downloader',
       linkText: 'See On Github',
     },

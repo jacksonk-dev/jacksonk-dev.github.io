@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Card, CardHeader, CardContent, CardMedia, Typography, Divider, Button, makeStyles,
+  Card, CardActionArea, CardHeader, CardMedia, Typography, makeStyles,
 } from '@material-ui/core';
+import CardView from '../../views/card';
+import inDialog from '../../containers/inDialog';
 import inContainer from './container';
+
+const DialoggedCard = inDialog(CardView);
 
 const useStyles = makeStyles(theme => ({
   root: {
-    animation: '.6s ease-in 0s 1 slideInFromTop'
+    animation: '.6s ease-in 0s 1 slideInFromTop',
   },
   header: {
     fontFamily: 'Brendan',
@@ -50,17 +54,24 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     margin: '8px auto',
   },
-  '@media (min-width: 640px)': {
+  '@media (min-width: 600px)': {
     projectsContainer: {
       display: 'grid',
       gridGap: '8px',
-      gridTemplateColumns: '30% 30% 30%',
+      gridTemplateColumns: 'repeat(auto-fill,250px)',
+      overflowY: 'auto',
+    },
+  },
+  '@media (min-width: 972px)': {
+    projectsContainer: {
+      gridTemplateColumns: 'repeat(auto-fill,400px)',
     },
   },
 }));
 
 const Profile = ({ projects }) => {
   const classes = useStyles();
+  const [dialogItemIndex, setDialogItemIndex] = useState();
 
   return (
     <div className={classes.root}>
@@ -69,39 +80,33 @@ const Profile = ({ projects }) => {
       </Typography>
       <div className={classes.projectsContainer}>
         {
-          projects.map(({
-            name, description, image, url, linkText,
-          }, index) => {
+          projects.map(({ name, image }, index) => {
             const reactKey = `${name}-${index}`;
             return (
-              <Card key={reactKey} className={classes.projectContainer}>
-                <CardMedia
-                  image={image}
-                  className={classes.media}
-                />
-                <CardHeader classes={{ title: classes.projectName }} title={name} />
-                <Divider className={classes.divider} />
-                <CardContent>
-                  <Typography>
-                    {description}
-                  </Typography>
-                  <Typography
-                    variant="subtitle1"
-                    className={classes.marginTop}
-                  >
-                    <Button
-                      component="a"
-                      href={url}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      key={reactKey}
-                      className={classes.link}
-                    >
-                      {linkText || 'Check out'}
-                    </Button>
-                  </Typography>
-                </CardContent>
-              </Card>
+              <Fragment key={reactKey}>
+                <Card
+                  className={classes.projectContainer}
+                >
+                  <CardActionArea onClick={() => { setDialogItemIndex(index); }}>
+                    <CardMedia
+                      image={image}
+                      className={classes.media}
+                    />
+                    <CardHeader classes={{ title: classes.projectName }} title={name} />
+                  </CardActionArea>
+                </Card>
+                {
+                  typeof dialogItemIndex !== 'undefined' && (
+                    <DialoggedCard
+                      item={projects[dialogItemIndex]}
+                      open={dialogItemIndex !== undefined}
+                      onClose={() => {
+                        setDialogItemIndex(undefined);
+                      }}
+                    />
+                  )
+                }
+              </Fragment>
             );
           })
         }
