@@ -85,7 +85,7 @@ const SideMenu = ({
   const classes = useStyles();
 
   return (
-    <Paper className={classes.root} elevation={0}>
+    <Paper className={classes.root} elevation={0} square>
       <div className={classes.menuParent}>
         <MenuList className={classes.menu}>
           {
