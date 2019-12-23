@@ -14,7 +14,7 @@ const experienceYears = (new Date()).getFullYear() - 2015;
 const initialState = {
   profile: {
     name: 'jacksonk.dev',
-    description: `Software Engineer ( Js & Python ) with ${experienceYears}+ years of experience. When not coding; am watching movies/TV Shows/Documentaries, listening to music/podcasts, deejaying or taking long walks in nature - a little Chess / Pool here and there.`,
+    description: `Software Engineer ( Js & Python ) with ${experienceYears}+ years of experience. When not coding; am watching movies/TV shows/documentaries, listening to music/podcasts, deejaying or taking long walks in nature - a little Chess and Pool here and there.`,
     image: './images/profilePic.jpg',
     online: [
       {
