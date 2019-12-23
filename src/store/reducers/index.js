@@ -3,28 +3,37 @@ import {
   FaTwitter,
   FaMedium,
   FaGithub,
-  FaInstagram,
-  FaFacebookF,
-  FaMixcloud,
+  // FaInstagram,
+  // FaFacebookF,
+  // FaMixcloud,
+  FaStackOverflow,
 } from 'react-icons/fa';
+
+const experienceYears = (new Date()).getFullYear() - 2015;
 
 const initialState = {
   profile: {
     name: 'jacksonk.dev',
-    description: 'JavaScript, PHP and Python Dev. Just a spoiler alert, am that guy you see in your dreams - the greatest Js & Python programmer in your 2020 dreams.',
+    description: `Software Engineer ( Js & Python ) with ${experienceYears}+ years of experience. When not coding; am watching movies/TV Shows/Documentaries, listening to music/podcasts, deejaying or taking long walks in nature - a little Chess / Pool here and there.`,
     image: './images/profilePic.jpg',
     online: [
+      {
+        app: 'Github',
+        link: 'https://github.com/jacksonk-dev',
+        Icon: FaGithub,
+        username: 'jacksonk-dev',
+      },
+      {
+        app: 'StackOverflow',
+        link: 'https://stackoverflow.com/users/9135987/jacksonk-dev?tab=profile',
+        Icon: FaStackOverflow,
+        username: 'jacksonk-dev',
+      },
       {
         app: 'LinkedIn',
         link: 'https://www.linkedIn.com/in/jacksonk-dev',
         Icon: FaLinkedin,
         username: 'jacksonk-dev',
-      },
-      {
-        app: 'Medium',
-        link: 'https://medium.com/@jacksonk.dev',
-        Icon: FaMedium,
-        username: 'jacksonk.dev',
       },
       {
         app: 'Twitter',
@@ -33,27 +42,27 @@ const initialState = {
         username: 'jacksonk_dev',
       },
       {
-        app: 'Github',
-        link: 'https://github.com/jacksonk-dev',
-        Icon: FaGithub,
-        username: 'jacksonk-dev',
-      },
-      {
-        app: 'Instagram',
-        link: 'https://www.instagram.com/jacksonk.dev',
-        Icon: FaInstagram,
+        app: 'Medium',
+        link: 'https://medium.com/@jacksonk.dev',
+        Icon: FaMedium,
         username: 'jacksonk.dev',
       },
-      {
-        app: 'Facebook',
-        link: 'https://www.facebook.com/jackson.kamya.79',
-        Icon: FaFacebookF,
-      },
-      {
-        app: 'MixCloud',
-        Icon: FaMixcloud,
-        link: 'https://www.mixcloud.com/Deejekay_ug/',
-      },
+      // {
+      //   app: 'Instagram',
+      //   link: 'https://www.instagram.com/jacksonk.dev',
+      //   Icon: FaInstagram,
+      //   username: 'jacksonk.dev',
+      // },
+      // {
+      //   app: 'Facebook',
+      //   link: 'https://www.facebook.com/jackson.kamya.79',
+      //   Icon: FaFacebookF,
+      // },
+      // {
+      //   app: 'MixCloud',
+      //   Icon: FaMixcloud,
+      //   link: 'https://www.mixcloud.com/Deejekay_ug/',
+      // },
       {
         app: 'Yote',
         link: 'https://yote.app/@j.kamya',
