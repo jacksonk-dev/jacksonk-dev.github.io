@@ -6,6 +6,7 @@ import {
 
 const useStyles = makeStyles(theme => ({
   root: {
+    width: '100%',
     animation: '.6s ease-in 0s 1 slideInFromRight',
   },
   header: {
@@ -14,14 +15,14 @@ const useStyles = makeStyles(theme => ({
     color: 'cyan',
   },
   container: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexGrow: 0,
-    padding: theme.spacing(3),
+    padding: `0 ${theme.spacing(1)}px`,
+    '@media(max-width: 576px)': {
+      textAlign: 'center',
+    },
   },
   link: {
-    width: '128px',
-    height: '128px',
+    width: '100px',
+    height: '100px',
     padding: '10%',
     margin: theme.spacing(1),
     border: '4px solid white',
@@ -30,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   icon: {
-    fontSize: 60,
+    fontSize: 50,
     color: 'cyan',
   },
   iconPlaceholder: {
@@ -45,8 +46,7 @@ const Online = ({ data: { online } }) => {
     <Card className={classes.root}>
       <CardHeader classes={{ title: classes.header }} title="Find me online" />
       <CardContent className={classes.container}>
-        <div>
-          {
+        {
           online.map(({ app, link, Icon }, index) => {
             const reactKey = `${app}-link-${index}`;
             return (
@@ -72,7 +72,6 @@ const Online = ({ data: { online } }) => {
             );
           })
         }
-        </div>
       </CardContent>
     </Card>
   );

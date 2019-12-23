@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
       width: 60,
       height: 60,
       border: '3px solid cyan',
-      margin: '8px auto',
+      margin: '8px 16px',
     },
     menuExpandIconContainer: {
       height: '100%',
@@ -122,7 +122,13 @@ const SideMenu = ({
             })
           }
         </MenuList>
-        <Avatar alt="JK" src="images/jack.jpg" className={classes.avatar} />
+        <Avatar
+          alt="JK"
+          src="images/jack.jpg"
+          className={classes.avatar}
+          component={Link}
+          to=""
+        />
       </div>
       <div className={classes.menuExpandIconContainer}>
         {
