@@ -3,9 +3,6 @@ import {
   FaTwitter,
   FaMedium,
   FaGithub,
-  // FaInstagram,
-  // FaFacebookF,
-  // FaMixcloud,
   FaStackOverflow,
 } from 'react-icons/fa';
 
@@ -14,7 +11,7 @@ const experienceYears = (new Date()).getFullYear() - 2015;
 const initialState = {
   profile: {
     name: 'jacksonk.dev',
-    description: `Software Engineer ( Js & Python ) with ${experienceYears}+ years of experience. When not coding; am watching movies/TV shows/documentaries, listening to music/podcasts, deejaying or taking long walks in nature - a little Chess and Pool here and there.`,
+    description: `I am a Front End Software Engineer, a little backend here and there with ${experienceYears}+ years of experience. When not coding; am listening to/playing music, playing board games, enjoying the environment or watching a little TV.`,
     image: './images/profilePic.jpg',
     online: [
       {
