@@ -70,6 +70,13 @@ const initialState = {
 
   projects: [
     {
+      name: 'Fore-play',
+      description: 'Just for fun',
+      image: './images/projects/fore-play.jpeg',
+      url: 'https://jacksonk-dev.github.io/fore-play',
+      linkText: 'See it',
+    },
+    {
       name: 'Jekay Technologies Website',
       description: 'Jekay Technologies Website',
       image: './images/projects/jekayTech.PNG',
