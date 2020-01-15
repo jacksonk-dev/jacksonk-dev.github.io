@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   link: {
     width: '100px',
     height: '100px',
-    padding: '10%',
+    padding: '7%',
     margin: theme.spacing(1),
     border: '4px solid white',
     borderRadius: '50%',
