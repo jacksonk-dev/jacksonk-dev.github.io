@@ -27,7 +27,7 @@ const FootNote = () => {
       >
         &copy;
         {' '}
-        Jekay Technologies
+        Jekay
         {`  ${new Date().getFullYear()}`}
       </Typography>
     </div>
