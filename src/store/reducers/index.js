@@ -6,12 +6,10 @@ import {
   FaStackOverflow,
 } from 'react-icons/fa';
 
-const experienceYears = (new Date()).getFullYear() - 2015;
-
 const initialState = {
   profile: {
     name: 'jacksonk.dev',
-    description: `I am a front-end Software Engineer, a little backend here and there with ${experienceYears}+ years of experience. I love beautiful user interfaces and amazing user experience.`,
+    description: 'Hi, this is Jackson aka Jekay. I am a Software Engineer. I love beautiful user interfaces and amazing user experience.',
     image: './images/profilePic.jpg',
     online: [
       {
