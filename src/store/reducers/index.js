@@ -9,7 +9,7 @@ import {
 const initialState = {
   profile: {
     name: 'jacksonk.dev',
-    description: 'Hi, this is Jackson aka Jekay. I am a Software Engineer. I love beautiful user interfaces and amazing user experience.',
+    description: 'Hi, this is Jackson aka Jekay. I am a Software Engineer. Building things I care about, sometimes just for fun.',
     image: './images/profilePic.jpg',
     online: [
       {
