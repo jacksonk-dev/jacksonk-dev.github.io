@@ -4,12 +4,12 @@
   "description":"jacksonk-dev portfolio site",
   "icons": [
     {
-      "src": "./images/jack-white.jpg",
+      "src": "./images/jack.jpg",
       "sizes": "16x16, 24x24, 32x32, 48x48, 64x64, 72x72, 96x96, 128x128, 144x144, 168x168, 192x192, 256x256, 512x512, 300x300",
       "type": "image/jpg"
     },
     {
-      "src": "./images/jack-white.png",
+      "src": "./images/jack.png",
       "sizes": "16x16, 24x24, 32x32, 48x48, 64x64, 72x72, 96x96, 128x128, 144x144, 168x168, 192x192, 256x256, 512x512, 300x300",
       "type": "image/png"
     }

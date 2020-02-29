@@ -9,7 +9,7 @@ import {
 const initialState = {
   profile: {
     name: 'jacksonk.dev',
-    description: 'Hi, this is Jackson aka Jekay. I am a Software Engineer. Building things I care about, sometimes just for fun.',
+    description: 'Hi; I am Jackson Kamya, a Software Engineer. Skilled in front-end development ( Js/React ) and back-end development ( Python/Flask & PHP/CodeIgniter ) Would you like to work with me?',
     image: './images/profilePic.jpg',
     online: [
       {
