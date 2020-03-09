@@ -9,7 +9,7 @@ import {
 const initialState = {
   profile: {
     name: 'jacksonk.dev',
-    description: `Hi; I am Jackson Kamya, a Software Engineer with ${new Date().getFullYear() - 2015} years of experience in the industry. I work with Js/React/Node and Python/Flask. Previously worked with PHP/CodeIgniter. Would you like to work with me?`,
+    description: `Hi; I am Jackson Kamya, a Software Engineer with ${new Date().getFullYear() - 2018} years of experience in the industry. I work with Js/React/Node and Python/Flask. Previously worked with PHP/CodeIgniter. Would you like to work with me?`,
     image: './images/profilePic.jpg',
     online: [
       {
@@ -42,22 +42,6 @@ const initialState = {
         Icon: FaMedium,
         username: 'jacksonk.dev',
       },
-      // {
-      //   app: 'Instagram',
-      //   link: 'https://www.instagram.com/jacksonk.dev',
-      //   Icon: FaInstagram,
-      //   username: 'jacksonk.dev',
-      // },
-      // {
-      //   app: 'Facebook',
-      //   link: 'https://www.facebook.com/jackson.kamya.79',
-      //   Icon: FaFacebookF,
-      // },
-      // {
-      //   app: 'MixCloud',
-      //   Icon: FaMixcloud,
-      //   link: 'https://www.mixcloud.com/Deejekay_ug/',
-      // },
       {
         app: 'Yote',
         link: 'https://yote.app/@j.kamya',
