@@ -9,7 +9,7 @@ import {
 const initialState = {
   profile: {
     name: 'jacksonk.dev',
-    description: `Hi; I am Jackson Kamya, a Software Engineer with ${new Date().getFullYear() - 2018} years of experience in the industry. I work with Js/React/Node and Python/Flask. Previously worked with PHP/CodeIgniter. Would you like to work with me?`,
+    description: `Hi; I am Jackson Kamya, a Software Engineer with ${new Date().getFullYear() - 2018} years of experience in the industry. I mostly work with ReactJs. I also have knowledge in Python/Flask and PHP/CodeIgniter. Would you like to work with me?`,
     image: './images/profilePic.jpg',
     online: [
       {
