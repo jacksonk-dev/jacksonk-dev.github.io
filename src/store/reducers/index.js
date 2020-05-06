@@ -62,7 +62,7 @@ const initialState = {
       name: 'Jekay Technologies Website',
       description: 'Jekay Technologies Website',
       image: './images/projects/jekayTech.PNG',
-      url: 'https://jk-tech-prod.firebaseapp.com',
+      url: 'https://jekay-technologies.com',
       linkText: 'Go To',
     },
     {
